@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noiva com eu?</title>
+</head>
+
+
+<body>
+    <div id="conteudo">
+     <h2>Aceita noivar comigo?</h2>
+     <button class="btn" onclick="sim()">SIM</button>
+     <button class="btn" onclick="desviar(this)" onmouseover="desviar(this)">NÃO</button>  
+    </div>
+</body>
+    
+<style>
+    #conteudo {
+        background: #db6666;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .btn {
+    width: 80px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+</style>
+
+<script>
+    function sim(){
+     alert("Voçê aceitou noivar com seu pretinho! :)")
+    }
+
+    function desviar(t){
+     var btn = t;
+     btn.style.position = 'absolute';
+     btn.style.bottom = geraPosicao(10, 90);
+     btn.style.left = geraPosicao(10, 90);
+     console.log("opa,desviei...");
+    }
+    function geraPosicao(min, max) {
+ return (Math.random() * (max - min) + min) + "%";
+    }
+</script>
+
+</html>
